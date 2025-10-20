@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git submodule</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git submodule</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git submodule</code> se utiliza para agregar, inicializar y administrar repositorios Git dentro de otro repositorio principal.
+                        Los submódulos permiten incluir proyectos externos como dependencias manteniendo sus propios historiales de commits.
+                        Es útil para organizar dependencias de proyectos o librerías compartidas.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git submodule add &lt;repositorio_url&gt; &lt;ruta&gt;</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Agrega un submódulo en la ruta especificada apuntando al repositorio indicado.</p>
+                        </li>
+                        <li>
+                            <code><span>git submodule init</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Inicializa la configuración de los submódulos registrados en .gitmodules.</p>
+                        </li>
+                        <li>
+                            <code><span>git submodule update</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Clona y actualiza los submódulos a la revisión registrada en el repositorio principal.</p>
+                        </li>
+                        <li>
+                            <code><span>git submodule status</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Muestra el estado de los submódulos, indicando commits y si están actualizados.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code></code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code></code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git submodule (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

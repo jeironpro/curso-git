@@ -1,0 +1,188 @@
+.contenedor-git {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-git {
+    animation: suavizar 0.8s ease;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 50%);
+    overflow: hidden;
+    width: 90%;
+}
+
+@keyframes suavizar {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.definicion-comandos {
+    background-color: #fdfaf1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.definicion-comandos h2 {
+    margin-bottom: 10px;
+}
+
+.definicion-comandos h2,
+.comandos h2 {
+    align-items: center;
+    display: flex;
+    color: #222;
+    font-size: 1.3rem;
+    gap: 10px;
+}
+
+.definicion-comandos p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.comandos {
+    margin-top: 40px;
+}
+
+.comandos h2 {
+    margin-bottom: 20px;
+}
+
+.comandos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comandos li {
+    background-color: #fff;
+    border-left: 4px solid #ff5733;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    margin: 10px 0;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.comandos li:hover {
+    background-color: #fff4f0;
+    transform: translateX(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.comandos li code {
+    background-color: #ffbfb0;
+    color: #222;
+    font-family: "Fira Code", monospace;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    transition: background-color 0.2s;
+}
+
+.comandos li:hover code {
+    background-color: #ff9f8f;
+}
+
+.comandos li .material-symbols-outlined {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.comandos li p {
+    margin: 0 8px;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.iteracion {
+    background-color: #fdfaf1;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.iteracion h3 {
+    align-items: center;
+    color: #222;
+    display: flex;
+    font-size: 1.3rem;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.iteracion pre {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.15);
+    color: #00ff88;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    padding: 20px;
+    transition: 0.3s ease;
+    width: 90%;
+}
+
+.iteracion pre:hover {
+    box-shadow: inset 0 0 18px rgba(0, 255, 136, 0.25);
+}
+
+.bloque-ejecutar,
+.bloque-resultado,
+.bloque-ejercicio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.bloque-resultado pre {
+    box-shadow: inset 0 0 12px rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+.bloque-resultado pre:hover {
+    box-shadow: inset 0 0 18px rgba(255, 193, 7, 0.25);
+}
+
+.bloque-ejercicio a {
+    background-color: #00ff88;
+    border-radius: 10px;
+    color: #1e1e1e;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    width: 90%;
+}
+
+.bloque-ejercicio a:hover {
+    background-color: #68ffb8;
+}

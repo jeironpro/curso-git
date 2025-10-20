@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git config</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git config</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git config</code> se utiliza para ver y establecer las configuraciones de Git.
+                        Permite definir información del usuario, preferencias de formato, colores, editores predeterminados y opciones globales o locales.
+                        Las configuraciones pueden aplicarse a nivel local (solo el repositorio actual), global (para todos los repositorios del usuario) o de sistema (para todos los usuarios del equipo).
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git config --global user.name "&lt;nombre&gt;"</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Establece el nombre del usuario para todos los commits realizados en el sistema.</p>
+                        </li>
+                        <li>
+                            <code><span>git config --global user.email "&lt;correo&gt;"</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Configura el correo electrónico del usuario globalmente.</p>
+                        </li>
+                        <li>
+                            <code><span>git config --list</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Muestra todas las configuraciones actuales de Git (locales, globales y de sistema).</p>
+                        </li>
+                        <li>
+                            <code><span>git config --edit --global</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Abre el archivo global de configuración en el editor por defecto para editarlo manualmente.</p>
+                        </li>
+                        <li>
+                            <code><span>git config core.editor "code --wait"</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Define Visual Studio Code como editor predeterminado para Git.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code>$ git config --global user.name "jeironpro"
+$ git config --global user.email "jeironprogrammer@gmail.com"
+$ git config --list</code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code>user.name=jeironpro
+user.email=jeironprogrammer@gmail.com</code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git commit (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

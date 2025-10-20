@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git gc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git gc</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git gc</code> (garbage collection) se utiliza para optimizar el repositorio Git.
+                        Combina objetos sueltos, comprime datos y limpia referencias innecesarias, mejorando el rendimiento y reduciendo el tamaño del repositorio.
+                        Es recomendable ejecutarlo periódicamente, especialmente en repositorios grandes.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git gc</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Realiza una recolección de basura estándar optimizando el repositorio.</p>
+                        </li>
+                        <li>
+                            <code><span>git gc --aggressive</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Ejecuta una recolección más exhaustiva y agresiva, optimizando aún más el repositorio a costa de más tiempo de ejecución.</p>
+                        </li>
+                        <li>
+                            <code><span>git gc --prune=now</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Elimina inmediatamente objetos inalcanzables sin esperar el tiempo de retención por defecto.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code>$ git branch
+$ git checkout main
+$ git push
+$ git gc</code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code>* backend
+main
+
+Cambiado a rama 'main'
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:usuario/mi-proyecto.git
+   10aa5be..3e26d6b  main -> main
+
+Enumerando objetos: 34, listo.
+Contando objetos: 100% (34/34), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (27/27), listo.
+Escribiendo objetos: 100% (34/34), listo.
+Total 34 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+Enumerando objetos inalcanzables: 8, listo.
+Atravesando objetos inalcanzables: 10, listo.
+Contando objetos: 100% (8/8), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (4/4), listo.
+Escribiendo objetos: 100% (8/8), listo.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)</code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git gc (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

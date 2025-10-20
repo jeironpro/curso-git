@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git push</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git push</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git push</code> se utiliza para enviar los commits de tu repositorio local al remoto.
+                        Actualiza la rama remota con tus cambios locales, permitiendo que otros colaboren y vean tus modificaciones.
+                        Es el paso final para sincronizar tu trabajo con el repositorio compartido.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git push</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Envía los commits de la rama actual al remoto configurado por defecto (origin).</p>
+                        </li>
+                        <li>
+                            <code><span>git push origin main</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Envía los commits de la rama main al remoto origin.</p>
+                        </li>
+                        <li>
+                            <code><span>git push -u origin main</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Establece la rama remota main como upstream y envía los cambios.</p>
+                        </li>
+                        <li>
+                            <code><span>git push --force</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Forza la actualización del remoto, sobrescribiendo cambios si es necesario. Usar con precaución.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code>$ git push
+$ git push --set-upstream origin main</code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code>fatal: La rama actual main no tiene una rama upstream.
+Para empujar la rama actual y configurar el remoto como upstream, usa
+
+    git push --set-upstream origin main
+
+Para hacer que esto pase automáticamente para las ramas que no rastrean
+un upstream, mira 'push.autoSetupRemote' en 'git help config'.
+
+Enumerando objetos: 16, listo.
+Contando objetos: 100% (16/16), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (11/11), listo.
+Escribiendo objetos: 100% (16/16), 1.39 KiB | 1.39 MiB/s, listo.
+Total 16 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:usuario/mi-proyecto.git
+ * [new branch]      main -> main
+rama 'main' configurada para rastrear 'origin/main'.</code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git push (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

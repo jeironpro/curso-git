@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git pull</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git pull</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git pull</code> se utiliza para actualizar la rama actual con los cambios del repositorio remoto.
+                        Combina automáticamente <code>git fetch</code> (descargar cambios) y <code>git merge</code> (fusionarlos).
+                        Es útil para mantener tu repositorio local sincronizado con el remoto.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git pull</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Actualiza la rama actual desde su remoto configurado (por defecto origin).</p>
+                        </li>
+                        <li>
+                            <code><span>git pull origin main</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Trae y fusiona los cambios de la rama main del remoto origin.</p>
+                        </li>
+                        <li>
+                            <code><span>git pull --rebase</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Actualiza la rama actual aplicando tus commits locales sobre los cambios remotos (rebase).</p>
+                        </li>
+                        <li>
+                            <code><span>git pull --ff-only</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Actualiza solo si se puede hacer un avance rápido; evita fusiones automáticas.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code></code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code></code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git pull (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

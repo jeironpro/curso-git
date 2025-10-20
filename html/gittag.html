@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git tag</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git tag</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git tag</code> se utiliza para crear, listar o eliminar etiquetas (tags) en un repositorio de Git.
+                        Las etiquetas son referencias fijas a commits específicos y suelen usarse para marcar versiones o hitos importantes.
+                        Es útil para versionar y distribuir releases de manera clara.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git tag</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Muestra todas las etiquetas (tags) que existen en el repositorio.</p>
+                        </li>
+                        <li>
+                            <code><span>git tag v1.0</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Crea una etiqueta ligera llamada v1.0 en el commit actual.</p>
+                        </li>
+                        <li>
+                            <code><span>git tag -a v1.0 -m "Versión 1.0"</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Crea una etiqueta anotada con mensaje explicativo.</p>
+                        </li>
+                        <li>
+                            <code><span>git tag -d v1.0</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Elimina una etiqueta localmente.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code>$ git tag v1.0 -m "Versión 1.0"
+$ git tag</code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code>v1.0</code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git tag (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

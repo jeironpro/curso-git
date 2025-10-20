@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/curso_git.png" type="image/x-icon">
+    <title>Git branch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/git.css">
+</head>
+<body>
+    <header>
+        <h1>Git branch</h1>
+    </header>
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <div class="definicion">
+                    <h2><span class="material-symbols-outlined">dictionary</span>Definición</h2>
+                    <p>
+                        El comando <code>git branch</code> se utiliza para listar, crear o eliminar ramas en un repositorio de Git.
+                        Las ramas permiten desarrollar funcionalidades de manera aislada sin afectar la rama principal.
+                        Es fundamental para gestionar el flujo de trabajo y la colaboración en proyectos.
+                    </p>
+                </div>
+                <div class="comandos">
+                    <h2><span class="material-symbols-outlined">keyboard_command_key</span>Comandos</h2>
+                    <ul>
+                        <li>
+                            <code><span>git branch</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Muestra todas las ramas locales del repositorio y la rama actual marcada con un asterisco.</p>
+                        </li>
+                        <li>
+                            <code><span>git branch &lt;nombre_rama&gt;</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Crea una nueva rama local con el nombre indicado.</p>
+                        </li>
+                        <li>
+                            <code><span>git branch -m &lt;nombre_antiguo&gt; &lt;nombre_nuevo&gt;</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Renombra una rama local.</p>
+                        </li>
+                        <li>
+                            <code><span>git branch -d &lt;nombre_rama&gt;</span><span class="material-symbols-outlined">arrow_right</span></code>
+                            <p>Elimina una rama local que ya ha sido fusionada.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div class="bloque-ejecutar">
+                    <h3><span class="material-symbols-outlined icon-ejecutar">terminal</span> Ejecutar</h3>
+                    <pre><code>$ git branch
+$ git branch frontend
+$ git branch backend
+$ git branch
+$ git branch -m frontend frontend_react
+$ git branch
+$ git branch -d frontend_react
+$ git branch</code></pre>
+                </div>
+                <div class="bloque-resultado">
+                    <h3><span class="material-symbols-outlined icon-resultado">insights</span> Resultado</h3>
+                    <pre><code>* main
+
+backend
+frontend
+* main
+
+backend
+frontend_react
+* main
+
+Eliminada la rama frontend_react (era a2b40ef).
+
+backend
+* main</code></pre>
+                </div>
+                <div class="bloque-ejercicio">
+                    <h3><span class="material-symbols-outlined">task</span>Ejercicio</h3>
+                    <a href="../ejercicios/" download>Ejercicio git branch (click aquí)</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>
