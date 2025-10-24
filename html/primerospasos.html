@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,81 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/git.css">
 </head>
+
 <body>
     <header>
         <h1>Primeros pasos</h1>
     </header>
-    <main>
-        
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="definicion-comandos">
+                <h2><span class="material-symbols-outlined">developer_guide</span>Intrucciones</h2>
+                <div>
+                    <p>Instalación de git</p>
+                    <ul>
+                        <li>sudo apt install git (Ubuntu)</li>
+                        <li>sudo dnf install git (Fedora)</li>
+                        <li><a
+                                href="https://github.com/git-for-windows/git/releases/download/v2.51.1.windows.1/Git-2.51.1-64-bit.exe">Instalador</a>
+                            (Windows)</li>
+                    </ul>
+                    <h2><span class="material-symbols-outlined">folder</span>Repositorio</h2>
+                    <p>Creación de repositorio en GitHub</p>
+                    <ul>
+                        <li>Iniciar sesiíon en <a href="https://github.com/">GitHub</a></li>
+                        <li>
+                            <span>Crear un nuevo repositorio</span>
+                            <ul>
+                                <li>Nombre del repositorio: <strong>mi-proyecto</strong></li>
+                                <li>
+                                    <span>Agregar el README</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="iteracion">
+                <h3><span class="material-symbols-outlined">key</span>Conexión SSH entre Git y GitHub</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <span>En tu terminal:</span>
+                            <ul>
+                                <li>Genera una nueva clave SSH:</li>
+                                <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></pre>
+                                <li>> Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM): <code>[Presiona enter]</code></li> 
+                                <li>> Enter passphrase (empty for no passphrase): <code>[Presiona enter]</code></li>
+                                <li>> Enter same passphrase again: <code>[Presiona enter]</code></li>
+                                <li>Inicia el agente SSH:</li>
+                                <pre><code>eval "$(ssh-agent -s)"</code></pre>
+                                <li>Agrega la clave al agente:</li>
+                                <pre><code>ssh-add ~/.ssh/id_ed25519</code></pre>
+                                <li>Muestra la clave pública y cópiala:</li>
+                                <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>En GitHub:</span>
+                            <ul>
+                                <li>Abre GitHub y ve a <strong>Settings</strong>.</li>
+                                <li>Selecciona <strong>SSH and GPG Keys</strong>.</li>
+                                <li>Haz clic en <strong>New SSH Key</strong>.</li>
+                                <li>En <em>Title</em>, escribe un nombre para la clave.</li>
+                                <li>En <em>Key Type</em>, selecciona <strong>Authentication Key</strong>.</li>
+                                <li>Pega el contenido copiado del archivo <code>id_ed25519.pub</code>.</li>
+                                <li>Haz clic en <strong>Add SSH Key</strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         &copy; Todos los derechos reservados 2025 - JeironPro
     </footer>
     <script src="../js/cabezera.js"></script>
 </body>
+
 </html>

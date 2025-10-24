@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,269 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/git.css">
 </head>
+
 <body>
     <header>
         <h1>Prueba final</h1>
     </header>
-    <main>
-        
+    <main class="contenedor-git">
+        <section class="seccion-git">
+            <article class="iteracion">
+                <div>
+                    <ol class="lista-prueba-final">
+                        <li>
+                            <span>git init - Crear un nuevo repositorio local</span>
+                            <ul>
+                                <li>Crea una carpeta llamada <code>proyecto_git</code>.</li>
+                                <li>Entra a ella y ejecuta <code>git init</code>.</li>
+                                <li>Verifica que se haya creado la carpeta oculta <code>.git</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git clone - Clonar un repositorio existente</span>
+                            <ul>
+                                <li>Clona el repositorio oficial (recuerda haber creado la conexión SSH entre Git y
+                                    GitHub).</li>
+                                <pre><code>git clone git@github.com:usuario/repo.git</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git config - Configurar la identidad del usuario</span>
+                            <ul>
+                                <li>Configura tu nombre y correo globalmente:</li>
+                                <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"</code></pre>
+                                <li>Comprueba la configuración con <code>git config --list</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git remote - Conectar el repositorio local con uno remoto</span>
+                            <ul>
+                                <li>Crea un repositorio vacío en GitHub llamado <code>proyecto_git</code>.</li>
+                                <li>Enlázalo con tu repositorio local:</li>
+                                <pre><code>git remote add origin git@github.com:usuario/proyecto_git.git</code></pre>
+                                <li>Verifica la conexión con <code>git remote -v</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git add - Preparar archivos para el commit</span>
+                            <ul>
+                                <li>Crea un archivo llamado <code>README.md</code>.</li>
+                                <li>Añádelo al área de preparación:</li>
+                                <pre><code>git add README.md</code></pre>
+                                <li>Verifica el estado con <code>git status</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git restore - Revertir cambios no deseados</span>
+                            <ul>
+                                <li>Modifica un archivo.</li>
+                                <li>Ejecuta <code>git restore nombre_del_archivo</code> para revertir los cambios.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git rm - Eliminar archivos del repositorio</span>
+                            <ul>
+                                <li>Crea un archivo <code>nota.txt</code> y luego elimínalo con:</li>
+                                <pre><code>git rm nota.txt</code></pre>
+                                <li>Confirma la eliminación con un commit.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git mv - Mover o renombrar archivos</span>
+                            <ul>
+                                <li>Renombra <code>README.md</code> a <code>INSTRUCCIONES.md</code> con:</li>
+                                <pre><code>git mv README.md INSTRUCCIONES.md</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git clean - Eliminar archivos no rastreados</span>
+                            <ul>
+                                <li>Crea un archivo temporal <code>prueba.tmp</code>.</li>
+                                <li>Elimínalo con:</li>
+                                <pre><code>git clean -f</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git commit - Guardar los cambios en el historial</span>
+                            <ul>
+                                <li>Realiza un commit con un mensaje descriptivo:</li>
+                                <pre><code>git commit -m "Primer commit"</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git log - Consultar el historial de commits</span>
+                            <ul>
+                                <li>Ejecuta <code>git log</code> y observa los autores, fechas y mensajes.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git show - Ver detalles de un commit específico</span>
+                            <ul>
+                                <li>Muestra la información del último commit con:</li>
+                                <pre><code>git show</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git diff - Ver las diferencias entre versiones</span>
+                            <ul>
+                                <li>Modifica un archivo y ejecuta:</li>
+                                <pre><code>git diff</code></pre>
+                                <li>Observa las líneas añadidas o eliminadas antes de hacer commit.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git blame - Ver quién modificó cada línea de un archivo</span>
+                            <ul>
+                                <li>Usa <code>git blame INSTRUCCIONES.md</code> para ver el autor de cada línea.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git reflog - Ver todas las acciones recientes del repositorio</span>
+                            <ul>
+                                <li>Ejecuta <code>git reflog</code> para ver los movimientos de HEAD, incluso commits
+                                    borrados.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git reset - Volver a un estado anterior</span>
+                            <ul>
+                                <li>Haz un commit de prueba.</li>
+                                <li>Luego deshazlo con:</li>
+                                <pre><code>git reset --soft HEAD~1</code></pre>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="iteracion">
+                <div>
+                    <ol start="17" class="lista-prueba-final">
+                        <li>
+                            <span>git revert - Deshacer un commit creando uno nuevo</span>
+                            <ul>
+                                <li>Revierte el último commit con:</li>
+                                <pre><code>git revert HEAD</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git bisect - Buscar el commit que introdujo un error</span>
+                            <ul>
+                                <li>Inicia una búsqueda con:</li>
+                                <pre><code>git bisect start
+git bisect bad
+git bisect good</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git stash - Guardar temporalmente los cambios sin hacer commit</span>
+                            <ul>
+                                <li>Guarda tus cambios con:</li>
+                                <pre><code>git stash</code></pre>
+                                <li>Recupéralos después con <code>git stash pop</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git branch - Crear o listar ramas</span>
+                            <ul>
+                                <li>Crea una nueva rama llamada <code>experimento</code> con:</li>
+                                <pre><code>git branch experimento</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git checkout - Cambiar de rama</span>
+                            <ul>
+                                <li>Cámbiate a la rama <code>experimento</code> con:</li>
+                                <pre><code>git checkout experimento</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git switch - Cambiar de rama (alternativa moderna a checkout)</span>
+                            <ul>
+                                <li>Vuelve a la rama principal con:</li>
+                                <pre><code>git switch main</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git merge - Fusionar ramas</span>
+                            <ul>
+                                <li>Une los cambios de <code>experimento</code> en <code>main</code> con:</li>
+                                <pre><code>git merge experimento</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git rebase - Reaplicar commits sobre otra rama</span>
+                            <ul>
+                                <li>Ejecuta <code>git rebase main</code> desde otra rama para reorganizar su historia.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git cherry-pick - Copiar un commit específico a otra rama</span>
+                            <ul>
+                                <li>Selecciona un commit del historial y aplícalo con:</li>
+                                <pre><code>git cherry-pick &lt;hash&gt;</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git fetch - Descargar información del remoto sin combinarla</span>
+                            <ul>
+                                <li>Ejecuta <code>git fetch origin</code> para traer referencias nuevas sin mezclarlas.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git pull - Descargar y fusionar cambios remotos</span>
+                            <ul>
+                                <li>Actualiza tu rama local con:</li>
+                                <pre><code>git pull origin main</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git push - Subir commits al repositorio remoto</span>
+                            <ul>
+                                <li>Envía tus cambios al servidor con:</li>
+                                <pre><code>git push origin main</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git tag - Marcar versiones específicas del proyecto</span>
+                            <ul>
+                                <li>Crea una etiqueta para una versión estable:</li>
+                                <pre><code>git tag v1.0
+git push origin v1.0</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git submodule - Incluir otro repositorio dentro del tuyo</span>
+                            <ul>
+                                <li>Añade un submódulo con:</li>
+                                <pre><code>git submodule add https://github.com/git/git submodulo_git</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git archive - Crear un paquete del proyecto</span>
+                            <ul>
+                                <li>Genera un archivo comprimido del proyecto:</li>
+                                <pre><code>git archive -o proyecto.zip HEAD</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>git gc - Limpiar y optimizar el repositorio</span>
+                            <ul>
+                                <li>Ejecuta <code>git gc</code> para eliminar datos innecesarios y optimizar el
+                                    repositorio.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         &copy; Todos los derechos reservados 2025 - JeironPro
     </footer>
     <script src="../js/cabezera.js"></script>
 </body>
+
 </html>
