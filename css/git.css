@@ -40,16 +40,6 @@
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* FOOTER */
-footer {
-    background: linear-gradient(135deg, var(--text-primary) 0%, #1e293b 100%);
-    border-top: 3px solid var(--primary);
-    color: var(--bg-primary);
-    padding: var(--space-xl) var(--space-lg);
-    position: relative;
-    width: 100%;
-}
-
 /* RESET Y BASE */
 * {
     box-sizing: border-box;
@@ -524,6 +514,10 @@ footer {
     .iteracion pre code {
         padding-top: var(--space-xl);
     }
+
+    footer {
+        font-size: 12px;
+    }
 }
 
 /* Small Mobile (375px - 479px) */
@@ -576,6 +570,10 @@ footer {
 
     pre {
         font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 12px;
     }
 }
 
