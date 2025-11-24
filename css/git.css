@@ -20,12 +20,16 @@
     --secondary-dark: #059669;
     --secondary-light: #34d399;
     --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.2);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --space-2xl: 48px;
     --space-3xl: 64px;
+    --space-4xl: 80px;
     --space-lg: 24px;
     --space-md: 16px;
     --space-sm: 8px;
@@ -48,16 +52,19 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    background: linear-gradient(135deg,
+            var(--bg-secondary) 0%,
+            var(--bg-tertiary) 100%);
     color: var(--text-primary);
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    line-height: 1.8;
     max-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
@@ -96,8 +103,9 @@ h3 {
 
 p {
     color: var(--text-secondary);
-    font-size: clamp(0.95rem, 2vw, 1rem);
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
 }
 
 /* Code Styling */
@@ -105,7 +113,7 @@ code {
     background: var(--bg-tertiary);
     border-radius: var(--radius-sm);
     color: var(--primary-dark);
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
     font-size: 0.9em;
     font-weight: 500;
     padding: 2px 6px;
@@ -116,8 +124,8 @@ pre {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     color: var(--code-text);
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
     line-height: 1.6;
     max-width: 100%;
     overflow-x: auto;
@@ -183,7 +191,9 @@ header #boton-siguiente {
 
 header a {
     align-items: center;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg,
+            var(--primary) 0%,
+            var(--primary-dark) 100%);
     border: 2px solid transparent;
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-md);
@@ -220,22 +230,22 @@ main {
     margin: 0 auto;
     max-width: 1400px;
     overflow-x: hidden;
-    padding: var(--space-2xl) var(--space-lg);
-    padding-bottom: var(--space-3xl);
+    padding: var(--space-3xl) var(--space-lg);
+    padding-bottom: var(--space-4xl);
     width: 100%;
 }
 
 .contenedor-git {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xl);
+    gap: var(--space-3xl);
     max-width: 100%;
 }
 
 .seccion-git {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xl);
+    gap: var(--space-3xl);
     max-width: 100%;
 }
 
@@ -247,7 +257,7 @@ article {
     box-shadow: var(--shadow-lg);
     max-width: 100%;
     overflow-wrap: break-word;
-    padding: var(--space-2xl);
+    padding: var(--space-3xl);
     transition: all var(--transition-base);
     word-wrap: break-word;
 }
@@ -260,20 +270,24 @@ article:hover {
 
 /* DEFINICIÓN Y COMANDOS */
 .definicion-comandos {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(99, 102, 241, 0.01) 100%);
+    background: linear-gradient(135deg,
+            rgba(99, 102, 241, 0.03) 0%,
+            rgba(99, 102, 241, 0.01) 100%);
     border-left: 4px solid var(--primary);
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xl);
+    gap: var(--space-3xl);
 }
 
 .definicion h2 {
     color: var(--primary-dark);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .definicion h2 .material-symbols-outlined {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg,
+            var(--primary) 0%,
+            var(--primary-dark) 100%);
     border-radius: var(--radius-md);
     color: white;
     font-size: 28px;
@@ -281,17 +295,19 @@ article:hover {
 }
 
 .definicion p {
-    margin-top: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
 /* Comandos */
 .comandos h2 {
     color: var(--secondary-dark);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
 }
 
 .comandos h2 .material-symbols-outlined {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+    background: linear-gradient(135deg,
+            var(--secondary) 0%,
+            var(--secondary-dark) 100%);
     border-radius: var(--radius-md);
     color: white;
     font-size: 28px;
@@ -301,7 +317,7 @@ article:hover {
 .comandos ul {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     list-style: none;
 }
 
@@ -309,10 +325,10 @@ article:hover {
     background: var(--bg-secondary);
     border-left: 3px solid var(--secondary);
     border-radius: var(--radius-md);
-    margin: var(--space-sm) 0;
+    margin: var(--space-lg) 0;
     max-width: 100%;
     overflow-wrap: break-word;
-    padding: var(--space-lg);
+    padding: var(--space-xl);
     transition: all var(--transition-base);
 }
 
@@ -332,7 +348,7 @@ article:hover {
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 600;
     gap: var(--space-md);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
     max-width: 100%;
     overflow-wrap: break-word;
     padding: var(--space-md) var(--space-lg);
@@ -368,20 +384,24 @@ article:hover {
 
 /* BLOQUES DE EJECUCIÓN Y RESULTADO */
 .iteracion {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(245, 158, 11, 0.01) 100%);
+    background: linear-gradient(135deg,
+            rgba(245, 158, 11, 0.03) 0%,
+            rgba(245, 158, 11, 0.01) 100%);
     border-left: 4px solid var(--accent);
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
 }
 
 .bloque-ejecutar h3 {
     color: var(--accent-dark);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .bloque-ejecutar h3 .icon-ejecutar {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(135deg,
+            var(--accent) 0%,
+            var(--accent-dark) 100%);
     border-radius: var(--radius-md);
     color: white;
     font-size: 24px;
@@ -390,11 +410,13 @@ article:hover {
 
 .bloque-resultado h3 {
     color: var(--success);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .bloque-resultado h3 .icon-resultado {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+    background: linear-gradient(135deg,
+            var(--secondary) 0%,
+            var(--secondary-dark) 100%);
     border-radius: var(--radius-md);
     color: white;
     font-size: 24px;
@@ -411,7 +433,7 @@ article:hover {
     background: var(--terminal-light);
     border-bottom: 1px solid var(--border);
     border-radius: var(--radius-md) var(--radius-md) 0 0;
-    content: '';
+    content: "";
     height: 32px;
     left: 0;
     position: absolute;
@@ -427,20 +449,87 @@ article:hover {
 /* Terminal prompt styling */
 .bloque-ejecutar pre code::before {
     color: var(--accent);
-    content: '$ ';
+    content: "$ ";
     font-weight: bold;
 }
 
-.pasos ul {
-    margin: 0 var(--space-md);
+/* LISTA PRUEBA FINAL Y PASOS GENERALES */
+.lista-prueba-final,
+.pasos > ul,
+.pasos > ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding: 0;
 }
 
-.pasos ul li {
-    margin: var(--space-lg) 0;
-}
-
-.pasos pre {
+.lista-prueba-final > li,
+.pasos > ul > li,
+.pasos > ol > li {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     margin-bottom: var(--space-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+/* Estilo para listas ordenadas (ol) */
+.lista-prueba-final > li::before,
+.pasos > ol > li::before {
+    background: var(--primary);
+    border-radius: var(--radius-full);
+    color: white;
+    content: counter(item);
+    counter-increment: item;
+    font-weight: bold;
+    height: 32px;
+    left: -16px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    width: 32px;
+}
+
+/* Estilo para listas desordenadas (ul) */
+.pasos > ul > li {
+    border-left: 4px solid var(--primary);
+}
+
+.lista-prueba-final > li > span,
+.pasos > ul > li > span,
+.pasos > ol > li > span {
+    color: var(--primary-dark);
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+}
+
+.lista-prueba-final ul,
+.pasos ul ul,
+.pasos ol ul {
+    list-style-type: disc;
+    padding-left: var(--space-xl);
+}
+
+.lista-prueba-final ul li,
+.pasos ul ul li,
+.pasos ol ul li {
+    margin-bottom: var(--space-md);
+}
+
+/* Enlaces en listas */
+.pasos a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.pasos a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -485,17 +574,17 @@ footer {
     }
 
     main {
-        padding: var(--space-md) var(--space-sm);
+        padding: var(--space-lg) var(--space-sm);
     }
 
     article {
         border-radius: var(--radius-md);
-        padding: var(--space-md);
+        padding: var(--space-lg);
     }
 
     .definicion-comandos,
     .iteracion {
-        gap: var(--space-md);
+        gap: var(--space-lg);
     }
 
     h2 {
@@ -508,7 +597,7 @@ footer {
     }
 
     .comandos li {
-        padding: var(--space-md);
+        padding: var(--space-lg);
     }
 
     .comandos li code {
@@ -523,6 +612,20 @@ footer {
 
     .iteracion pre code {
         padding-top: var(--space-xl);
+    }
+
+    /* List adjustments for small screens */
+    .lista-prueba-final > li,
+    .pasos > ul > li,
+    .pasos > ol > li {
+        margin-bottom: var(--space-lg);
+        padding: var(--space-md);
+    }
+
+    .lista-prueba-final ul,
+    .pasos ul ul,
+    .pasos ol ul {
+        padding-left: var(--space-lg);
     }
 
     footer {
@@ -559,16 +662,16 @@ footer {
     }
 
     main {
-        padding: var(--space-lg) var(--space-md);
+        padding: var(--space-xl) var(--space-md);
     }
 
     article {
-        padding: var(--space-lg);
+        padding: var(--space-xl);
     }
 
     .definicion-comandos,
     .iteracion {
-        gap: var(--space-lg);
+        gap: var(--space-xl);
     }
 
     .comandos li code {
@@ -578,6 +681,14 @@ footer {
 
     pre {
         font-size: 0.85rem;
+    }
+
+    /* List adjustments for mobile */
+    .lista-prueba-final > li,
+    .pasos > ul > li,
+    .pasos > ol > li {
+        margin-bottom: var(--space-lg);
+        padding: var(--space-lg);
     }
 
     footer {
@@ -610,11 +721,11 @@ footer {
     }
 
     main {
-        padding: var(--space-xl) var(--space-md);
+        padding: var(--space-2xl) var(--space-md);
     }
 
     article {
-        padding: var(--space-xl);
+        padding: var(--space-2xl);
     }
 
     pre {
@@ -651,11 +762,11 @@ footer {
     }
 
     main {
-        padding: var(--space-xl) var(--space-lg);
+        padding: var(--space-2xl) var(--space-lg);
     }
 
     article {
-        padding: var(--space-xl);
+        padding: var(--space-2xl);
     }
 }
 
@@ -684,11 +795,11 @@ footer {
     }
 
     main {
-        padding: var(--space-2xl) var(--space-lg);
+        padding: var(--space-3xl) var(--space-lg);
     }
 
     article {
-        padding: var(--space-2xl);
+        padding: var(--space-3xl);
     }
 }
 
@@ -713,7 +824,7 @@ footer {
 
     .seccion-git {
         display: grid;
-        gap: var(--space-2xl);
+        gap: var(--space-3xl);
         grid-template-columns: 1fr;
     }
 
@@ -737,7 +848,7 @@ footer {
     .seccion-git {
         align-items: start;
         display: grid;
-        gap: var(--space-2xl);
+        gap: var(--space-3xl);
         grid-template-columns: 1fr 1fr;
     }
 
@@ -748,12 +859,12 @@ footer {
 
 /* Large Desktop (1280px+) */
 @media (min-width: 1280px) {
-    main {
-        padding: var(--space-3xl) var(--space-2xl);
+    .contenedor-git {
+        gap: var(--space-4xl);
     }
 
-    .contenedor-git {
-        gap: var(--space-3xl);
+    main {
+        padding: var(--space-4xl) var(--space-3xl);
     }
 }
 
