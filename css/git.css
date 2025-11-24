@@ -1,7 +1,6 @@
 :root {
     --accent: #f59e0b;
     --accent-dark: #d97706;
-    --accent-light: #fbbf24;
     --bg-card: #ffffff;
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
@@ -10,8 +9,6 @@
     --border-light: #f1f5f9;
     --code-bg: #0f172a;
     --code-text: #10b981;
-    --error: #ef4444;
-    --info: #3b82f6;
     --primary: #6366f1;
     --primary-dark: #4f46e5;
     --primary-light: #818cf8;
@@ -19,7 +16,6 @@
     --radius-lg: 12px;
     --radius-md: 8px;
     --radius-sm: 6px;
-    --radius-xl: 16px;
     --secondary: #10b981;
     --secondary-dark: #059669;
     --secondary-light: #34d399;
@@ -34,7 +30,6 @@
     --space-md: 16px;
     --space-sm: 8px;
     --space-xl: 32px;
-    --space-xs: 4px;
     --success: #10b981;
     --terminal: #1e293b;
     --terminal-light: #334155;
@@ -43,13 +38,111 @@
     --text-secondary: #475569;
     --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    --warning: #f59e0b;
 }
 
-/* ============================================
-   2. RESET Y BASE
-   ============================================ */
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, var(--text-primary) 0%, #1e293b 100%);
+    border-top: 3px solid var(--primary);
+    color: var(--bg-primary);
+    padding: var(--space-xl) var(--space-lg);
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.footer-title {
+    color: white;
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-description {
+    color: var(--text-muted);
+    font-size: clamp(0.85rem, 1.8vw, 0.9rem);
+    margin: 0;
+}
+
+.footer-home {
+    align-items: center;
+    color: var(--primary-light);
+    display: inline-flex;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-home:hover {
+    color: var(--secondary-light);
+    transform: translateX(-4px);
+}
+
+.footer-home .material-symbols-outlined {
+    font-size: clamp(18px, 4vw, 20px);
+}
+
+.footer-links {
+    align-items: center;
+    display: flex;
+    gap: var(--space-md);
+}
+
+.footer-links a {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    color: white;
+    display: flex;
+    height: clamp(40px, 8vw, 44px);
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: clamp(40px, 8vw, 44px);
+}
+
+.footer-links a:hover {
+    background: var(--primary);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+    transform: translateY(-4px);
+}
+
+.footer-links svg {
+    height: clamp(20px, 4vw, 24px);
+    width: clamp(20px, 4vw, 24px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    margin: 0;
+}
+
+/* RESET Y BASE */
 * {
     box-sizing: border-box;
     margin: 0;

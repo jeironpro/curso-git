@@ -1,31 +1,18 @@
-/* Importar variables del sistema de diseño */
 :root {
-    --accent: #f59e0b;
-    --accent-dark: #d97706;
-    --accent-light: #fbbf24;
+    --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
+    --primary: #6366f1;
     --primary-dark: #4f46e5;
     --primary-light: #818cf8;
-    --radius-full: 9999px;
     --radius-lg: 12px;
-    --radius-md: 8px;
     --secondary: #10b981;
-    --secondary-dark: #059669;
-    --secondary-light: #34d399;
-    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.2);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --space-lg: 24px;
     --space-md: 16px;
-    --space-xl: 32px;
-    --text-muted: #94a3b8;
-    --text-secondary: #475569;
-    --primary: #6366f1;
     --space-sm: 8px;
-    --bg-primary: #ffffff;
-    --radius-sm: 6px;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --space-xl: 32px;
     --text-primary: #0f172a;
 }
 
@@ -45,7 +32,7 @@ body {
 }
 
 /* Header Principal */
-.cabecera-main {
+header {
     -webkit-backdrop-filter: blur(12px);
     align-items: center;
     backdrop-filter: blur(12px);
@@ -76,71 +63,104 @@ main {
     padding: var(--space-xl);
 }
 
-/* Árbol de Navegación */
+/* Árbol de Navegación - Diseño Moderno Vertical */
 .arbol {
-    max-width: 900px;
-    position: relative;
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+    padding: var(--space-lg) 0;
     width: 100%;
 }
 
-/* Nodos del Árbol */
+/* Nodos del Árbol - Cards Modernas */
 .nodo {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    border: 5px solid white;
-    border-radius: var(--radius-full);
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    -webkit-backdrop-filter: blur(10px);
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     cursor: pointer;
-    height: 50px;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    min-height: 120px;
+    overflow: hidden;
+    padding: var(--space-lg);
+    position: relative;
+    text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 50px;
-    z-index: 1;
+}
+
+.nodo::before {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nodo:hover::before {
+    transform: scaleX(1);
 }
 
 .nodo:hover {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-    box-shadow: var(--shadow-xl), 0 0 25px rgba(16, 185, 129, 0.4);
-    transform: scale(1.15);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-xl), 0 0 30px rgba(99, 102, 241, 0.2);
+    transform: translateY(-8px) scale(1.02);
 }
 
 .nodo:active {
-    transform: scale(1.05);
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* Ícono del Nodo */
+.nodo::after {
+    content: '📚';
+    font-size: 2.5rem;
+    left: 50%;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.nodo:hover::after {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
 }
 
 /* Títulos de los Nodos */
 .titulo {
-    background: white;
-    border: 1px solid var(--primary-light);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    color: var(--text-primary);
-    font-size: 0.9rem;
-    font-weight: 500;
-    left: 50%;
-    margin-top: var(--space-sm);
-    padding: 6px 12px;
-    position: absolute;
-    top: 100%;
-    transform: translateX(-50%);
-    transition: all 0.2s ease;
-    width: max-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background-clip: text;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 1;
 }
 
 .nodo:hover .titulo {
-    background: var(--bg-tertiary);
-    border-color: var(--secondary);
-    color: var(--secondary-dark);
+    transform: scale(1.05);
 }
 
-/* Líneas de Conexión */
+/* Líneas de Conexión - Ocultas en diseño de grid */
 .linea {
-    background: linear-gradient(90deg, var(--primary-light) 0%, var(--secondary-light) 100%);
-    height: 2px;
-    opacity: 0.6;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 0 0;
-    z-index: 0;
+    display: none;
 }
 
 /* Footer */
@@ -169,23 +189,27 @@ footer {
         padding: var(--space-lg);
     }
 
+    .arbol {
+        gap: var(--space-md);
+        grid-template-columns: 1fr;
+        padding: var(--space-md) 0;
+    }
+
     .nodo {
-        border-width: 3px;
-        height: 35px;
-        width: 35px;
+        min-height: 100px;
+        padding: var(--space-md);
+    }
+
+    .nodo::after {
+        font-size: 2rem;
     }
 
     .titulo {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-    }
-
-    .arbol {
-        margin-bottom: var(--space-lg);
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
     }
 
     footer {
-        font-size: 16px;
+        font-size: 14px;
         padding: var(--space-lg);
     }
 }
@@ -203,14 +227,45 @@ footer {
         padding: var(--space-md);
     }
 
+    .arbol {
+        gap: var(--space-sm);
+    }
+
     .nodo {
-        border-width: 2px;
-        height: 30px;
-        width: 30px;
+        min-height: 90px;
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .nodo::after {
+        font-size: 1.75rem;
     }
 
     .titulo {
-        font-size: 0.7rem;
-        padding: 3px 6px;
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .arbol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .arbol {
+        gap: var(--space-xl);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nodo {
+        min-height: 140px;
+    }
+
+    .nodo:hover {
+        transform: translateY(-12px) scale(1.03);
     }
 }
