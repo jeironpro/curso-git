@@ -309,6 +309,7 @@ article:hover {
     background: var(--bg-secondary);
     border-left: 3px solid var(--secondary);
     border-radius: var(--radius-md);
+    margin: var(--space-sm) 0;
     max-width: 100%;
     overflow-wrap: break-word;
     padding: var(--space-lg);
@@ -430,6 +431,18 @@ article:hover {
     font-weight: bold;
 }
 
+.pasos ul {
+    margin: 0 var(--space-md);
+}
+
+.pasos ul li {
+    margin: var(--space-lg) 0;
+}
+
+.pasos pre {
+    margin-bottom: var(--space-xl);
+}
+
 /* Footer */
 footer {
     background: var(--text-primary);
@@ -499,11 +512,8 @@ footer {
     }
 
     .comandos li code {
-        align-items: flex-start;
-        flex-direction: column;
         font-size: 0.85rem;
         gap: var(--space-sm);
-        padding: var(--space-sm) var(--space-md);
     }
 
     pre {
@@ -562,8 +572,6 @@ footer {
     }
 
     .comandos li code {
-        align-items: flex-start;
-        flex-direction: column;
         font-size: 0.9rem;
         gap: var(--space-sm);
     }
@@ -607,10 +615,6 @@ footer {
 
     article {
         padding: var(--space-xl);
-    }
-
-    .comandos li code {
-        font-size: 0.95rem;
     }
 
     pre {
